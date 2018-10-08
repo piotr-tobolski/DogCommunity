@@ -1,7 +1,7 @@
 import UIKit
 
 protocol AddPhotoViewControllerDelegate: class {
-    func addPhotoViewControllerDidFinish(addPhotoViewController: AddPhotoViewController)
+    func addPhotoViewController(_ addPhotoViewController: AddPhotoViewController, didFinishWithError: Bool)
 }
 
 class AddPhotoViewController: UIViewController {
@@ -32,11 +32,12 @@ class AddPhotoViewController: UIViewController {
     // MARK: IBActions
 
     @IBAction func cancelBarButtonItemAction() {
-        self.delegate?.addPhotoViewControllerDidFinish(addPhotoViewController: self)
+        self.delegate?.addPhotoViewController(self, didFinishWithError: false)
     }
 
     @IBAction func doneBarButtonItemAction() {
-        viewModel.addImage(title: nameTextField.text, owner: ownerTextField.text)
-        self.delegate?.addPhotoViewControllerDidFinish(addPhotoViewController: self)
+        viewModel.addImage(title: nameTextField.text, owner: ownerTextField.text) { success in
+            self.delegate?.addPhotoViewController(self, didFinishWithError: !success)
+        }
     }
 }

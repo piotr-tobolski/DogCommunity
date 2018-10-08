@@ -45,9 +45,17 @@ final class AppCoordinator: NSObject,
 
     // MARK: AddPhotoViewControllerDelegate
 
-    func addPhotoViewControllerDidFinish(addPhotoViewController: AddPhotoViewController) {
-        self.navigationController?.dismiss(animated: true)
-        self.photoListViewController?.reloadData()
+    func addPhotoViewController(_ addPhotoViewController: AddPhotoViewController, didFinishWithError: Bool) {
+        if didFinishWithError {
+            let alertController = UIAlertController(title: "Invalid photo", message: "DogCommunity accepts only photos of dogs", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                self.navigationController?.dismiss(animated: true)
+            }))
+            addPhotoViewController.present(alertController, animated: true)
+        } else {
+            self.photoListViewController?.reloadData()
+            self.navigationController?.dismiss(animated: true)
+        }
     }
 
     // MARK: UIImagePickerControllerDelegate

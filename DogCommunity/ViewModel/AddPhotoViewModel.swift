@@ -9,9 +9,15 @@ class AddPhotoViewModel {
         self.feedDownloader = feedDownloader
     }
 
-    func addImage(title: String?, owner: String?) {
-        guard let photo = createPhoto(title: title, author: owner) else { return }
-        feedDownloader.photos.insert(photo, at: 0)
+    func addImage(title: String?, owner: String?, completion: @escaping (Bool) -> Void) {
+        verifyPhoto { valid in
+            if valid, let photo = self.createPhoto(title: title, author: owner) {
+                self.feedDownloader.photos.insert(photo, at: 0)
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }
     }
 
     private func createPhoto(title: String?, author: String?) -> Photo? {
@@ -28,5 +34,10 @@ class AddPhotoViewModel {
         }
 
         return nil
+    }
+
+    private func verifyPhoto(_ completion: @escaping (Bool) -> Void) {
+        // We just trust people
+        completion(true)
     }
 }
