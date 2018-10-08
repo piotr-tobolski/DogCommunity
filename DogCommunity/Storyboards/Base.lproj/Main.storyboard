@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JCi-BN-EzU">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,7 +14,7 @@
             <objects>
                 <navigationController id="JCi-BN-EzU" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="be9-yw-vaB">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -30,11 +30,11 @@
             <objects>
                 <viewController id="oW9-Nv-GAx" customClass="PhotoListViewController" customModule="DogCommunity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fN7-vA-C3s">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AUB-mr-ZmT">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="Twq-uy-eDr"/>
                                 <cells/>
@@ -44,7 +44,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is nothing to show. Pull to refresh." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaD-qc-XTM">
-                                <rect key="frame" x="34" y="323" width="307" height="21"/>
+                                <rect key="frame" x="6.5" y="229.5" width="307" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -63,6 +63,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Dog Community" id="ksl-2T-1uW">
                         <barButtonItem key="backBarButtonItem" title="Feed" id="4nA-F6-bqJ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ix3-rZ-1wI">
+                            <connections>
+                                <action selector="addBarButtonItemAction" destination="oW9-Nv-GAx" id="e8G-Ar-LeF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="AUB-mr-ZmT" id="ZEz-cR-vBc"/>
@@ -84,14 +89,14 @@
             <objects>
                 <viewController storyboardIdentifier="PhotoViewController" id="yXf-e8-ofG" customClass="PhotoViewController" customModule="DogCommunity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tNb-la-z2s">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="always" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-2b-24q">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iJi-wA-Pdp">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                 </subviews>
@@ -126,6 +131,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tB6-y4-uiL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="999.20000000000005" y="116.49175412293854"/>
+        </scene>
+        <!--Add photo-->
+        <scene sceneID="pbc-i1-H5P">
+            <objects>
+                <viewController storyboardIdentifier="AddPhotoViewController" id="gTJ-aj-Mo9" customClass="AddPhotoViewController" customModule="DogCommunity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FEZ-Ec-fYF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="500" placeholderIntrinsicHeight="500" translatesAutoresizingMaskIntoConstraints="NO" id="flG-wS-TQl">
+                                <rect key="frame" x="0.0" y="64" width="320" height="340"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tX4-B6-GIk">
+                                <rect key="frame" x="16" y="412" width="288" height="30"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardAppearance="alert" textContentType="name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Owner" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zpb-59-P6n">
+                                <rect key="frame" x="16" y="450" width="288" height="30"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" keyboardAppearance="alert" textContentType="name"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zpb-59-P6n" secondAttribute="trailing" id="2Nj-fb-3cO"/>
+                            <constraint firstItem="zpb-59-P6n" firstAttribute="top" secondItem="tX4-B6-GIk" secondAttribute="bottom" constant="8" id="B97-9l-lDP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tX4-B6-GIk" secondAttribute="trailing" id="GfA-hE-3Jd"/>
+                            <constraint firstItem="zpb-59-P6n" firstAttribute="leading" secondItem="FEZ-Ec-fYF" secondAttribute="leadingMargin" id="GmJ-aU-rga"/>
+                            <constraint firstItem="flG-wS-TQl" firstAttribute="leading" secondItem="SOU-Nk-gPL" secondAttribute="leading" id="J4V-Lm-nop"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="zpb-59-P6n" secondAttribute="bottom" id="Q3R-xT-FS1"/>
+                            <constraint firstItem="tX4-B6-GIk" firstAttribute="top" secondItem="flG-wS-TQl" secondAttribute="bottom" constant="8" id="nJT-bW-jrd"/>
+                            <constraint firstItem="flG-wS-TQl" firstAttribute="top" secondItem="SOU-Nk-gPL" secondAttribute="top" id="o8h-ak-Zcb"/>
+                            <constraint firstItem="flG-wS-TQl" firstAttribute="trailing" secondItem="SOU-Nk-gPL" secondAttribute="trailing" id="r3A-2X-g4H"/>
+                            <constraint firstItem="tX4-B6-GIk" firstAttribute="leading" secondItem="FEZ-Ec-fYF" secondAttribute="leadingMargin" id="vRx-2Q-j2E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SOU-Nk-gPL"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Add photo" id="ebJ-au-rJw">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="VvV-O7-DG1">
+                            <connections>
+                                <action selector="cancelBarButtonItemAction" destination="gTJ-aj-Mo9" id="oDf-bh-qqZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Z1N-Ro-uRL">
+                            <connections>
+                                <action selector="doneBarButtonItemAction" destination="gTJ-aj-Mo9" id="TrK-P7-Ikt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="flG-wS-TQl" id="dKR-w1-NtJ"/>
+                        <outlet property="nameTextField" destination="tX4-B6-GIk" id="GHK-4U-4Mu"/>
+                        <outlet property="ownerTextField" destination="zpb-59-P6n" id="Hkg-Ht-CnU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="470-t6-TjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="999" y="810"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SmS-4u-Bo0">
+            <objects>
+                <navigationController storyboardIdentifier="AddPhotoNavigationViewController" id="Pc0-mr-9uv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="lgk-xv-KPT">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gTJ-aj-Mo9" kind="relationship" relationship="rootViewController" id="N0a-MC-gWy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eRP-JU-ITu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="810"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

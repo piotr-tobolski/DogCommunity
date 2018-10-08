@@ -5,6 +5,7 @@ private let cellNibName = "PhotoListCollectionViewCell"
 
 protocol PhotoListViewControllerDelegate: class {
     func photoListViewControllerDidSelect(_ photo: Photo)
+    func photoListViewControllerDidSelectAddPhoto()
 }
 
 class PhotoListViewController: UIViewController, UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout, PhotoListViewModelDelegate {
@@ -28,7 +29,8 @@ class PhotoListViewController: UIViewController, UICollectionViewDataSource, CHT
         collectionView.refreshControl = refreshControl
 
         viewModel.delegate = self
-        viewModel.load()
+        
+        reloadData()
     }
 
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -47,8 +49,20 @@ class PhotoListViewController: UIViewController, UICollectionViewDataSource, CHT
         return 2
     }
 
-    @IBAction private func refreshControlValueChanged() {
+    // MARK: Public
+
+    func reloadData() {
         viewModel.load()
+    }
+
+    // MARK: IBActions
+
+    @IBAction private func refreshControlValueChanged() {
+        reloadData()
+    }
+
+    @IBAction private func addBarButtonItemAction() {
+        self.delegate?.photoListViewControllerDidSelectAddPhoto()
     }
 
     // MARK: UICollectionViewDataSource

@@ -8,6 +8,7 @@ target 'DogCommunity' do
   pod 'AlamofireImage', '3.4.1'
   pod 'FontAwesome.swift', '1.4.4'
   pod 'CHTCollectionViewWaterfallLayout', '0.9.7'
+  pod 'IQKeyboardManagerSwift', '6.0.4'
 
   target 'DogCommunityTests' do
     inherit! :search_paths

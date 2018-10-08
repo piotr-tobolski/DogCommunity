@@ -22,8 +22,8 @@ class PhotoListCollectionViewCell: UICollectionViewCell {
     }
 
     func configure(with photo: Photo) {
-        titleLabel.text = photo.title
-        authorLabel.text = photo.author.map { "Owner: " + $0 }
+        titleLabel.text = photo.title.map { "🐶 " + $0 }
+        authorLabel.text = photo.author.map { "🧑 " + $0 }
 
         let imageTransition = UIImageView.ImageTransition.custom(duration: 0.5, animationOptions: .transitionCrossDissolve, animations: { imageView, image in
             imageView.image = image

@@ -1,7 +1,7 @@
 import Foundation
 
 class FeedDownloader {
-    private let photos: [Photo] = [
+    var photos: [Photo] = [
         Photo(URL: URL(string: "https://piotrtobolski.com/dogs/dog.0.jpg")!,
               title: "Bella",
               author: "Oliver",

@@ -15,6 +15,8 @@
 		A123B3092024C5910021673B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A123B3082024C5910021673B /* Assets.xcassets */; };
 		A123B30C2024C5910021673B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A123B30A2024C5910021673B /* LaunchScreen.storyboard */; };
 		A17B12AC2166A62200CBEE0D /* FeedDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B12AB2166A62200CBEE0D /* FeedDownloader.swift */; };
+		A17B12AE21678E5700CBEE0D /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B12AD21678E5700CBEE0D /* AddPhotoViewController.swift */; };
+		A17B12B02167902F00CBEE0D /* AddPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B12AF2167902F00CBEE0D /* AddPhotoViewModel.swift */; };
 		A188867C202627EE00E0D654 /* UIRefreshControlUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A188867B202627EE00E0D654 /* UIRefreshControlUtilitiesTests.swift */; };
 		A192916B202634D800D1A59F /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192916A202634D800D1A59F /* PhotoViewController.swift */; };
 		A192916D20263E5800D1A59F /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192916C20263E5800D1A59F /* AppCoordinatorTests.swift */; };
@@ -52,6 +54,8 @@
 		A123B3122024C5910021673B /* DogCommunityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogCommunityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A123B3182024C5910021673B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A17B12AB2166A62200CBEE0D /* FeedDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedDownloader.swift; sourceTree = "<group>"; };
+		A17B12AD21678E5700CBEE0D /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
+		A17B12AF2167902F00CBEE0D /* AddPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewModel.swift; sourceTree = "<group>"; };
 		A188867B202627EE00E0D654 /* UIRefreshControlUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRefreshControlUtilitiesTests.swift; sourceTree = "<group>"; };
 		A192916A202634D800D1A59F /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		A192916C20263E5800D1A59F /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 			children = (
 				A1C9C0A12024F58B00ACDD84 /* PhotoListViewController.swift */,
 				A192916A202634D800D1A59F /* PhotoViewController.swift */,
+				A17B12AD21678E5700CBEE0D /* AddPhotoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				A1C9C0A42024F64F00ACDD84 /* PhotoListViewModel.swift */,
+				A17B12AF2167902F00CBEE0D /* AddPhotoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/CHTCollectionViewWaterfallLayout/CHTCollectionViewWaterfallLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -352,6 +359,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHTCollectionViewWaterfallLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -407,9 +415,11 @@
 				A10B52EB2025CEF4008EA3F9 /* UIRefreshControl+Utilities.swift in Sources */,
 				A1C571F92024CDB400BFCFE3 /* Photo.swift in Sources */,
 				A10ECACE2025B91E0071B0E7 /* PhotoListCollectionViewCell.swift in Sources */,
+				A17B12B02167902F00CBEE0D /* AddPhotoViewModel.swift in Sources */,
 				A1C9C0A22024F58B00ACDD84 /* PhotoListViewController.swift in Sources */,
 				A17B12AC2166A62200CBEE0D /* FeedDownloader.swift in Sources */,
 				A123B3022024C58F0021673B /* AppDelegate.swift in Sources */,
+				A17B12AE21678E5700CBEE0D /* AddPhotoViewController.swift in Sources */,
 				A1C9C0A52024F64F00ACDD84 /* PhotoListViewModel.swift in Sources */,
 				A192916B202634D800D1A59F /* PhotoViewController.swift in Sources */,
 			);
