@@ -1,4 +1,5 @@
 import UIKit
+import Vision
 
 class AddPhotoViewModel {
     private let feedDownloader: FeedDownloader
@@ -37,7 +38,25 @@ class AddPhotoViewModel {
     }
 
     private func verifyPhoto(_ completion: @escaping (Bool) -> Void) {
-        // We just trust people
-        completion(true)
+        DispatchQueue.global().async {
+            do {
+                let model = try VNCoreMLModel(for: CatOrDog().model)
+                let request = VNCoreMLRequest(model: model)
+
+                let handler = VNImageRequestHandler(cgImage: self.image.cgImage!)
+                try handler.perform([request])
+
+                if let classification = request.results?.first as? VNClassificationObservation,
+                    classification.identifier == "Dog" {
+                    DispatchQueue.main.async { completion(true) }
+                } else {
+                    throw NSError(domain: "dogcommunity.photo.cat", code: 0)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(false)
+                }
+            }
+        }
     }
 }

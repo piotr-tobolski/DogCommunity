@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10AF997216BFA7200FFF8BD /* CatOrDog.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A10AF996216BFA7200FFF8BD /* CatOrDog.mlmodel */; };
 		A10B52EB2025CEF4008EA3F9 /* UIRefreshControl+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B52EA2025CEF4008EA3F9 /* UIRefreshControl+Utilities.swift */; };
 		A10ECACE2025B91E0071B0E7 /* PhotoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10ECACC2025B91E0071B0E7 /* PhotoListCollectionViewCell.swift */; };
 		A10ECACF2025B91E0071B0E7 /* PhotoListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10ECACD2025B91E0071B0E7 /* PhotoListCollectionViewCell.xib */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		226892F9DF453C1608C0F597 /* Pods-DogCommunity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogCommunity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DogCommunity/Pods-DogCommunity.debug.xcconfig"; sourceTree = "<group>"; };
 		807DA346332097F740395087 /* Pods_DogCommunity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DogCommunity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10AF996216BFA7200FFF8BD /* CatOrDog.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CatOrDog.mlmodel; sourceTree = "<group>"; };
 		A10B52EA2025CEF4008EA3F9 /* UIRefreshControl+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Utilities.swift"; sourceTree = "<group>"; };
 		A10ECACC2025B91E0071B0E7 /* PhotoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListCollectionViewCell.swift; sourceTree = "<group>"; };
 		A10ECACD2025B91E0071B0E7 /* PhotoListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoListCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		A123B3002024C58F0021673B /* DogCommunity */ = {
 			isa = PBXGroup;
 			children = (
+				A10AF996216BFA7200FFF8BD /* CatOrDog.mlmodel */,
 				A1C9C09E2024F2A700ACDD84 /* Controllers */,
 				A1C571FC2024E04C00BFCFE3 /* Model */,
 				A1C9C09C2024F22000ACDD84 /* Storyboards */,
@@ -408,6 +411,7 @@
 				A1C9C0A02024F3CF00ACDD84 /* AppCoordinator.swift in Sources */,
 				A10B52EB2025CEF4008EA3F9 /* UIRefreshControl+Utilities.swift in Sources */,
 				A1C571F92024CDB400BFCFE3 /* Photo.swift in Sources */,
+				A10AF997216BFA7200FFF8BD /* CatOrDog.mlmodel in Sources */,
 				A10ECACE2025B91E0071B0E7 /* PhotoListCollectionViewCell.swift in Sources */,
 				A17B12B02167902F00CBEE0D /* AddPhotoViewModel.swift in Sources */,
 				A1C9C0A22024F58B00ACDD84 /* PhotoListViewController.swift in Sources */,
