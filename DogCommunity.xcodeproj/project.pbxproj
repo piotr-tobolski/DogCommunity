@@ -20,6 +20,7 @@
 		A188867C202627EE00E0D654 /* UIRefreshControlUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A188867B202627EE00E0D654 /* UIRefreshControlUtilitiesTests.swift */; };
 		A192916B202634D800D1A59F /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192916A202634D800D1A59F /* PhotoViewController.swift */; };
 		A192916D20263E5800D1A59F /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A192916C20263E5800D1A59F /* AppCoordinatorTests.swift */; };
+		A1B33CD62174BCEF00EF7BEE /* photos in Resources */ = {isa = PBXBuildFile; fileRef = A1B33CD52174BCEE00EF7BEE /* photos */; };
 		A1C571F92024CDB400BFCFE3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C571F82024CDB400BFCFE3 /* Photo.swift */; };
 		A1C9C0A02024F3CF00ACDD84 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C9C09F2024F3CF00ACDD84 /* AppCoordinator.swift */; };
 		A1C9C0A22024F58B00ACDD84 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C9C0A12024F58B00ACDD84 /* PhotoListViewController.swift */; };
@@ -59,6 +60,7 @@
 		A188867B202627EE00E0D654 /* UIRefreshControlUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRefreshControlUtilitiesTests.swift; sourceTree = "<group>"; };
 		A192916A202634D800D1A59F /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		A192916C20263E5800D1A59F /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		A1B33CD52174BCEE00EF7BEE /* photos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = photos; sourceTree = "<group>"; };
 		A1C571F82024CDB400BFCFE3 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		A1C9C09F2024F3CF00ACDD84 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A1C9C0A12024F58B00ACDD84 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				A10ECACB2025B7600071B0E7 /* Views */,
 				A123B3012024C58F0021673B /* AppDelegate.swift */,
 				A1C9C09F2024F3CF00ACDD84 /* AppCoordinator.swift */,
+				A1B33CD52174BCEE00EF7BEE /* photos */,
 				A123B3082024C5910021673B /* Assets.xcassets */,
 			);
 			path = DogCommunity;
@@ -305,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1B33CD62174BCEF00EF7BEE /* photos in Resources */,
 				A123B30C2024C5910021673B /* LaunchScreen.storyboard in Resources */,
 				A10ECACF2025B91E0071B0E7 /* PhotoListCollectionViewCell.xib in Resources */,
 				A123B3092024C5910021673B /* Assets.xcassets in Resources */,
