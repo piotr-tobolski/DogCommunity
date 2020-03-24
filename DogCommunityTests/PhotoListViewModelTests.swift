@@ -12,7 +12,6 @@ class PhotoListViewModelSpec: QuickSpec {
     }
 
     class MockFeedDownloader: FeedDownloader {
-        var photos: [Photo] = []
         override func downloadFeed() -> [Photo] {
             return photos
         }
