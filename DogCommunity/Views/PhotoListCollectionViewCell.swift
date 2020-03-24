@@ -29,7 +29,7 @@ class PhotoListCollectionViewCell: UICollectionViewCell {
             imageView.image = image
             self.placeholderImageView.alpha = 0
         }, completion: nil)
-        self.imageView.af_setImage(withURL: photo.URL, imageTransition: imageTransition) { _ in
+        self.imageView.af.setImage(withURL: photo.URL, imageTransition: imageTransition) { _ in
             self.placeholderImageView.alpha = 0
         }
     }

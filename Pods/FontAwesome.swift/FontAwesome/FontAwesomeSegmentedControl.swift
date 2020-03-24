@@ -34,6 +34,7 @@ import UIKit
     }
 
     public override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
         useFontAwesome()
     }
 
@@ -47,7 +48,7 @@ import UIKit
         }
         updateFontAttributes { (state, font) in
             var attributes = titleTextAttributes(for: state) ?? [:]
-            attributes[NSAttributedStringKey.font] = font
+            attributes[NSAttributedString.Key.font] = font
             setTitleTextAttributes(attributes, for: state)
         }
     }
@@ -67,7 +68,7 @@ extension FontAwesomeSegmentedControl: FontAwesomeTextRepresentable {
         return size
     }
 
-    static func supportedStates() -> [UIControlState] {
+    static func supportedStates() -> [UIControl.State] {
         if #available(iOS 9.0, *) {
             return [.normal, .highlighted, .disabled, .focused, .selected, .application, .reserved]
         } else {

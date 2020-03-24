@@ -9,6 +9,6 @@ class PhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = photo.title
-        imageView.af_setImage(withURL: photo.URL)
+        imageView.af.setImage(withURL: photo.URL)
     }
 }
