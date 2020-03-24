@@ -10,7 +10,7 @@ class PhotoListViewModel {
     }
 
     private(set) var photos = [Photo]()
-    private var viewState = ViewState.init {
+    private var viewState = ViewState.`init` {
         didSet {
             self.delegate?.viewModelDidChangeStateTo(viewState)
         }
